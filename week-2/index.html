@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration & Routine</title>
+    <style>
+        /* Basic Styling */
+        body { font-family: Arial, sans-serif; margin: 20px; line-height: 1.6; background-color: #f4f4f4; }
+        
+        /* Back Button Styling */
+        .back-link { text-decoration: none; font-weight: bold; color: #333; display: inline-block; margin-bottom: 20px;}
+        .back-link:hover { color: #007bff; }
+
+        /* Table Design */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 40px; background-color: white; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: center; }
+        th { background-color: #2c3e50; color: white; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+
+        /* Form Container Design */
+        .form-container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            max-width: 600px; /* Increased width for better layout */
+            margin: 0 auto;
+        }
+
+        /* Input Field Design */
+        input[type="text"], 
+        input[type="email"], 
+        input[type="tel"],
+        input[type="date"],
+        select, 
+        textarea { 
+            width: 100%; 
+            padding: 10px; 
+            margin: 8px 0 20px 0;
+            box-sizing: border-box; 
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        textarea { height: 80px; resize: vertical; }
+
+        /* Label Design */
+        label { font-weight: bold; color: #333; }
+
+        /* Radio & Checkbox Design */
+        .radio-group { margin-bottom: 20px; }
+        input[type="radio"], input[type="checkbox"] { width: auto; margin-right: 8px; }
+
+        /* Submit Button Design */
+        button { 
+            background-color: #28a745; 
+            color: white; 
+            padding: 12px; 
+            font-size: 16px; 
+            border: none; 
+            border-radius: 4px; 
+            cursor: pointer; 
+            width: 100%;
+            font-weight: bold;
+        }
+        button:hover { background-color: #218838; }
+        
+        /* Footer Design */
+        footer { text-align: center; margin-top: 50px; padding: 20px; color: #666; border-top: 1px solid #ddd; }
+        .social-link { text-decoration: none; margin: 0 10px; color: #007bff; font-weight: bold; }
+        .social-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <a href="../index.html" class="back-link">← Back to Home</a>
+    
+    <h1 style="text-align: center; color: #333;">Week 2: Forms and Tables</h1>
+    <hr style="margin-bottom: 30px;">
+
+    <h2 style="text-align: center; color: #2c3e50;">1. Class Routine</h2>
+    <p style="text-align: center; margin-bottom: 20px;">Weekly schedule for Web Development Batch-101</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>10:00 AM - 11:30 AM</th>
+                <th>11:30 AM - 01:00 PM</th>
+                <th>Room No</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sunday</td>
+                <td>HTML Structure</td>
+                <td>Lab Practice</td>
+                <td>Lab-101</td>
+            </tr>
+            <tr>
+                <td>Monday</td>
+                <td>CSS Styling</td>
+                <td>Design Principles</td>
+                <td>Lab-101</td>
+            </tr>
+            <tr>
+                <td>Tuesday</td>
+                <td>Bootstrap Framework</td>
+                <td>Responsive Design</td>
+                <td>Lab-102</td>
+            </tr>
+            <tr>
+                <td>Wednesday</td>
+                <td>JavaScript Basics</td>
+                <td>Logic Building</td>
+                <td>Lab-103</td>
+            </tr>
+            <tr>
+                <td style="font-weight: bold; color: #d9534f;">Friday</td>
+                <td colspan="2">Project Review & Weekly Quiz</td>
+                <td>Conf-Room</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr style="margin: 40px 0;">
+
+    <h2 style="text-align: center; color: #2c3e50;">2. Student Admission Form</h2>
+    <p style="text-align: center; margin-bottom: 30px;">Complete the form below to apply for the course.</p>
+
+    <div class="form-container">
+        <form action="#">
+            
+            <h3 style="border-bottom: 2px solid #eee; padding-bottom: 10px;">Personal Information</h3>
+            
+            <label for="fname">Full Name:</label>
+            <input type="text" id="fname" name="fullname" placeholder="Enter your full name" required>
+
+            <div style="display: flex; gap: 20px;">
+                <div style="width: 50%;">
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+                </div>
+                <div style="width: 50%;">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="017xxxxxxxx" required>
+                </div>
+            </div>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male"> <label for="male" style="font-weight: normal;">Male</label>
+                <input type="radio" id="female" name="gender" value="female" style="margin-left: 15px;"> <label for="female" style="font-weight: normal;">Female</label>
+            </div>
+
+            <label for="address">Present Address:</label>
+            <textarea id="address" name="address" placeholder="Enter your full address here..."></textarea>
+
+            <h3 style="border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 20px;">Academic Details</h3>
+
+            <label for="edu">Highest Qualification:</label>
+            <select id="edu" name="education">
+                <option value="" disabled selected>Select Qualification</option>
+                <option value="ssc">SSC / O-Level</option>
+                <option value="hsc">HSC / A-Level</option>
+                <option value="bachelor">Bachelor's Degree</option>
+                <option value="master">Master's Degree</option>
+            </select>
+
+            <label for="course">Interested Course:</label>
+            <select id="course" name="course">
+                <option value="web">Full Stack Web Development</option>
+                <option value="app">Mobile App Development</option>
+                <option value="data">Data Science</option>
+            </select>
+
+            <label>Preferred Batch Time:</label>
+            <div class="radio-group">
+                <input type="radio" id="morning" name="batch" value="morning" checked> 
+                <label for="morning" style="font-weight: normal;">Morning (10 AM - 1 PM)</label><br>
+                <input type="radio" id="evening" name="batch" value="evening"> 
+                <label for="evening" style="font-weight: normal;">Evening (6 PM - 9 PM)</label>
+            </div>
+
+            <div style="margin: 20px 0;">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms" style="font-weight: normal; font-size: 14px;">I hereby declare that the information provided is true and correct.</label>
+            </div>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>Follow me for updates:</p>
+        <a href="https://github.com/smsagorhossain/" target="_blank" class="social-link">GitHub</a> | 
+        <a href="https://www.linkedin.com/in/itspecialistsagor/" target="_blank" class="social-link">LinkedIn</a>
+        <br><br>
+        <p>&copy; 2025 <a href="https://github.com/smsagorhossain/" target="_blank" style="text-decoration: none; color: #333; font-weight: bold;">Md. Sagor Hossain</a>. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
